@@ -1,0 +1,43 @@
+[Exemplo 1]
+"Não consigo acessar o sistema de RH desde ontem. Minha senha é recusada."
+{
+  "category": "access",
+  "priority": "medium",
+  "team": "identity",
+  "system": "RH",
+  "location": null,
+  "summary": "Usuário relata que sua senha é recusada no sistema de RH desde ontem.",
+  "action": "route",
+  "missing_information": [],
+  "clarification_question": null
+}
+
+[Exemplo 2]
+"O negócio não está funcionando direito. Preciso de ajuda."
+{
+  "category": "other",
+  "priority": "low",
+  "team": "general",
+  "system": null,
+  "location": null,
+  "summary": "Cliente relata um problema não especificado.",
+  "action": "request_clarification",
+  "missing_information": ["system", "problem_description"],
+  "clarification_question": "Qual sistema ou serviço apresenta o problema e o que acontece quando você tenta utilizá-lo?"
+}
+
+[Exemplo 3]
+"O sistema de pagamentos caiu e nenhuma das nossas lojas consegue registrar vendas."
+{
+  "category": "availability",
+  "priority": "critical",
+  "team": "infrastructure",
+  "system": "pagamentos",
+  "location": null,
+  "summary": "Sistema de pagamentos indisponível, impedindo o registro de vendas em todas as lojas.",
+  "action": "route",
+  "missing_information": [],
+  "clarification_question": null
+}
+
+
