@@ -22,6 +22,10 @@ class Team(str, Enum):
     DATA = "data"
     GENERAL = "general"
 
+class TriageAction(str, Enum):
+    ROUTE = "route"
+    REQUEST_CLARIFICATION = "request_clarification"
+
 
 class TicketInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -38,3 +42,6 @@ class TicketClassification(BaseModel):
     system: str | None
     location: str | None
     summary: str = Field(min_length=1, max_length=500)
+    action: TriageAction
+    missing_information: list[str] = Field(default_factory=list)
+    clarification_question: str | None = None
